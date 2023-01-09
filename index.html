@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" >
+
+
+    
+
+    <title>Document</title>
+</head>
+<body>
+ <div class="container" id="container">
+
+    <div class="music-player" id="player">
+
+       <div class="wave-circle" id="wave" >
+        
+          <div class="poster" id="poster"></div>
+
+        </div> 
+
+       
+      
+      
+      
+      <div class="menu"> 
+        <div class="info">
+            <h3 id="title">Track Name</h3>
+            
+            <h4 id="Artist">Artist</h4>
+
+        </div>
+        <div class="progress-container" >
+            <progress id="progress-bar" value="0" max="100"></progress>
+        </div>
+         <div class="navigation">
+
+         <button id="shuffle" class="action-btn"  >
+                <i class="fas fa-shuffle fa-2x" id="shuffle-off"></i>
+                
+        </button>
+        <button id="prev" class="action-btn ">
+            <i class="fas fa-backward fa-2x"></i>
+        </button>
+
+        <button id="play-pause" class="action-btn action-btn-big">
+            <i class="fas fa-play fa-3x" id="play"></i>
+            <i class="fas fa-pause fa-3x" id="pause" ></i>
+        </button>
+
+        <button id="next" class="action-btn">
+            <i class="fas fa-forward fa-2x"></i>
+        </button>
+
+        <button id="loop" class="action-btn">
+            <i class="fas fa-repeat fa-2x"></i>
+        </button>
+
+
+        
+        </div>
+        <div class="footer">
+        <div id="volume-bar-container" class="volume-bar">
+            <input type="range" min="1" max="100" value="50" class="volumeslider" id="volume-bar" onchange="setVolume()">
+          </div>
+        </div>
+
+       
+
+
+      </div>
+      <audio src="lofi.mp3" id="audio"></audio>
+      
+
+    </div>
+
+   
+   
+
+
+ </div>
+
+  
+  
+ <script src="work.js">
+ </script> 
+</body>
+
+</html>

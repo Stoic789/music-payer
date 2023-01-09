@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+    background-color: rgb(5, 14, 7);
+    
+}
+.container{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(45deg,#3b8e67,#0076bf);
+    position: relative;
+    background-size: cover;
+    transition: all 0.5s ease;
+    background-color:rgba(255, 255, 255, 0.3) ;
+}
+.container::before{
+
+  content:'';
+  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-color: #fff;
+  background-size: cover;
+  filter: blur(10px) ;
+  
+}
+
+
+
+
+
+
+.music-player{
+    width: 350px;
+    height: 530px;
+    background: rgb(139, 198, 197);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px #12a977 #0076bf;
+    background-size: cover;
+    position: relative;
+    background-image: url(Resource/ghost-face.png);
+    transition: all 0.5s ease;
+    
+}
+
+
+.poster
+{ 
+    
+    width: 250px;
+    height: 250px;
+    background-color: cornflowerblue;
+    
+    background-size: cover;
+    border-radius: 50%;
+    position: center;
+    transition: all 0.5s ease;
+
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .poster {
+    animation: rotation 10s linear infinite;
+  }
+
+
+  @keyframes wave {
+    0% {
+      border-radius: 50%;
+    }
+    50% {
+      border-radius: 20%;
+    }
+    100% {
+      border-radius: 50%;
+    }
+  }
+  .wave-circle{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    border-radius: 50%;
+    background-size: cover;
+
+    position: relative;
+    animation:  wave 2s linear infinite,rotation 30s linear infinite;
+    transition: all 0.5s ease;
+   
+    
+  }
+
+
+  
+ 
+
+  
+  
+  
+
+.menu{
+  position: relative;
+  background-color:rgba(255, 255, 255, 0.3);
+  width: 325px;
+  height: 180px;
+  border-radius: 20px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 8px;
+  
+  border-style: none;
+ background-color: rgba(255, 255, 255, 0.3);
+ transition: all 0.5s ease;
+ 
+  
+  
+}
+button:hover{
+
+background-color: rgba(255, 255, 255, 0.8);
+}
+.navigation{
+  display: flex;
+  margin: 0 auto;
+}
+
+.info{
+  
+   padding: 0;
+   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+#title{
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+}
+#Artist
+{
+  margin: 0 auto;
+  display: flex;
+  color: black;
+}
+
+.play-pause {
+  grid-area: one;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#play-pause {
+  transition: transform 0.2s;
+}
+#pause {
+  
+  
+  display: none;
+}
+
+
+#shuffle-off{
+  display: block;
+}
+
+#progress-bar,#volume-bar{
+  height: 3px;
+  width: 250px;
+  border-radius: 2.5px;
+  margin: 8px auto;
+  display: flex;
+  transition: all 0.1s ease;
+}
+
+input::-webkit-slider-thumb { background:rgb(255, 255, 255);}
+progress::-webkit-progress-value { background: rgb(255, 255, 255); }
+#volume-bar::-webkit-progress-value {
+  background: white;
+}
+
+
+
